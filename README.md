@@ -1,30 +1,30 @@
 # Gmail-phishing
 this is education purpose and testing script at 2018.
-
-requirements:
-
-ngrok acc auth token {
-  https://dashboard.ngrok.com/signup
-  https://dashboard.ngrok.com/get-started
-  save authtoken at step 3.
-}
-apache2
-php
-
-
-usage :
-
-git clone https://github.com/Mr219/Gmail-phishing.git
-cd Gmail-phishing
-chmod +x lazy.sh
-./lazy.sh
-
-you will get ngrok subdomain from terminal.
-send "ngroksubdomain/gmail" to your victims.
-you can see victims pass from another terminal tab with "cat /var/www/html/gmail/msf-lazy.txt".
-
-don't change file permission.
-
-Thanks ,
-
+\n
+requirements:\n
+\n
+ngrok acc auth token {\n
+  https://dashboard.ngrok.com/signup \n
+  https://dashboard.ngrok.com/get-started \n
+  save authtoken at step 3.\n
+}\n
+apache2\n
+php\n
+\n
+\n
+usage :\n
+\n
+git clone https://github.com/Mr219/Gmail-phishing.git \n
+cd Gmail-phishing\n
+chmod +x lazy.sh\n
+./lazy.sh\n
+\n
+you will get ngrok subdomain from terminal.\n
+send "ngroksubdomain/gmail" to your victims.\n
+you can see victims pass from another terminal tab with "cat /var/www/html/gmail/msf-lazy.txt".\n
+\n
+don't change file permission.\n
+\n
+Thanks ,\n
+\n
 Lazy Phishers
